@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohammed Al Meqdad — Conversation Design Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F6F5F0;
+    --ink: #1C1F26;
+    --ink-soft: #565B66;
+    --ink-faint: #8A8578;
+    --accent: #35506B;
+    --accent-warm: #A9702F;
+    --rule: #DAD5C8;
+    --max: 700px;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: var(--max);
+    margin: 0 auto;
+    padding: 88px 24px 120px;
+  }
+
+  header.hero {
+    margin-bottom: 64px;
+  }
+
+  h1.name {
+    font-family: "Fraunces", serif;
+    font-weight: 500;
+    font-size: clamp(2.4rem, 5vw, 3.1rem);
+    line-height: 1.08;
+    margin: 0 0 10px;
+    letter-spacing: -0.01em;
+  }
+
+  p.tagline {
+    font-family: "Fraunces", serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 1.2rem;
+    color: var(--accent);
+    margin: 0 0 28px;
+  }
+
+  p.intro {
+    max-width: 62ch;
+    color: var(--ink-soft);
+    font-size: 1.05rem;
+    margin: 0;
+  }
+
+  p.intro strong {
+    color: var(--ink);
+    font-weight: 600;
+  }
+
+  .contact-row {
+    margin-top: 24px;
+    font-size: 0.95rem;
+    color: var(--ink-faint);
+  }
+
+  .contact-row a {
+    color: var(--accent);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(53, 80, 107, 0.3);
+  }
+
+  .contact-row a:hover { border-bottom-color: var(--accent); }
+
+  .contact-row .sep {
+    margin: 0 10px;
+    color: var(--rule);
+  }
+
+  section.case {
+    padding-top: 56px;
+    margin-top: 56px;
+    border-top: 1px solid var(--rule);
+  }
+
+  section.case.full { padding-top: 64px; margin-top: 64px; }
+
+  .case-index {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--ink-faint);
+    letter-spacing: 0.03em;
+    margin: 0 0 14px;
+  }
+
+  h2.case-title {
+    font-family: "Fraunces", serif;
+    font-weight: 500;
+    font-size: clamp(1.5rem, 3vw, 1.85rem);
+    line-height: 1.2;
+    margin: 0 0 12px;
+    max-width: 24ch;
+  }
+
+  p.challenge {
+    font-size: 1.02rem;
+    color: var(--ink-soft);
+    max-width: 58ch;
+    margin: 0 0 28px;
+  }
+
+  h3.sub {
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 28px 0 14px;
+  }
+
+  ul.approach {
+    margin: 0 0 8px;
+    padding: 0;
+    list-style: none;
+    max-width: 62ch;
+  }
+
+  ul.approach li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 14px;
+    color: var(--ink);
+  }
+
+  ul.approach li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 6px;
+    height: 6px;
+    background: var(--accent-warm);
+    border-radius: 50%;
+  }
+
+  .transcript {
+    margin: 30px 0 30px;
+    padding: 4px 0 4px 22px;
+    border-left: 2px solid var(--accent-warm);
+    max-width: 56ch;
+  }
+
+  .turn {
+    margin-bottom: 16px;
+  }
+
+  .turn:last-child { margin-bottom: 0; }
+
+  .speaker {
+    font-weight: 600;
+    color: var(--accent);
+    margin-right: 6px;
+  }
+
+  .turn.user .speaker { color: var(--ink-faint); }
+
+  .turn p {
+    display: inline;
+    margin: 0;
+    color: var(--ink);
+  }
+
+  .goal-note {
+    font-size: 0.92rem;
+    color: var(--ink-faint);
+    font-style: italic;
+    margin: 24px 0 0;
+    max-width: 58ch;
+  }
+
+  .demonstrates {
+    margin-top: 32px;
+    font-size: 0.92rem;
+    color: var(--accent);
+  }
+
+  .demonstrates .label {
+    color: var(--ink-faint);
+    font-style: normal;
+  }
+
+  footer {
+    margin-top: 80px;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+    font-size: 0.9rem;
+    color: var(--ink-faint);
+  }
+
+  footer a { color: var(--accent); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+
+  @media (max-width: 560px) {
+    .wrap { padding: 56px 20px 80px; }
+    header.hero { margin-bottom: 48px; }
+    section.case { padding-top: 40px; margin-top: 40px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <h1 class="name">Mohammed Al Meqdad</h1>
+    <p class="tagline">Conversation design, read the way a linguist reads it</p>
+    <p class="intro">
+      I trained as a linguist before I trained as a designer, and it shows in how I work:
+      <strong>every flow starts from how people actually mean things</strong>, not just what they type or say.
+      The four projects below span guided commerce, multi-step booking, and the evaluation layer that
+      decides whether a conversation is actually working &mdash; drawn from six years designing and
+      evaluating production conversational AI for enterprise clients.
+    </p>
+    <p class="contact-row">
+      <a href="mailto:me.meqdad@gmail.com">me.meqdad@gmail.com</a>
+      <span class="sep">&middot;</span>
+      <a href="https://www.linkedin.com/in/mohammed-al-meqdad-phd-nlp-cxd-linguist" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </p>
+  </header>
+
+  <!-- CASE STUDY 1 — FULL -->
+  <section class="case full" id="shopping">
+    <p class="case-index">01 &nbsp;Guided commerce</p>
+    <h2 class="case-title">A shopping assistant that asks why before it recommends</h2>
+    <p class="challenge">
+      A global consumer electronics retailer wanted a website chatbot that could do more than keyword
+      search &mdash; it needed to shop the way a good in-store associate does, by understanding what a
+      customer actually needs before suggesting anything.
+    </p>
+
+    <h3 class="sub">Approach</h3>
+    <ul class="approach">
+      <li>Mapped a consultative sales conversation into a flexible slot-filling flow: why they're
+      shopping, what's not working with what they have, which features would fix that, and any
+      remaining preferences &mdash; answerable in any order, not a rigid script.</li>
+      <li>Wrote the assistant's persona and behavior prompt from scratch: tone, voice, and a strict
+      output contract pairing a natural-language reply with a machine-readable product list, so the
+      model's output was always predictable downstream.</li>
+      <li>Designed two function-call contracts &mdash; one to search inventory, one to pull full product
+      detail &mdash; so every recommendation stayed grounded in real data instead of the model
+      inventing specs.</li>
+      <li>Wrote reference conversations covering the happy path and the edge cases (budget pushback,
+      feature comparisons, out-of-stock items) so engineering had a concrete target for the model's
+      behavior before a line of code was written.</li>
+    </ul>
+
+    <h3 class="sub">A shortened example</h3>
+    <div class="transcript">
+      <div class="turn user"><span class="speaker">Shopper</span><p>I need new headphones for work calls.</p></div>
+      <div class="turn"><span class="speaker">Assistant</span><p>Happy to help. What's not working with your current pair, if you don't mind me asking?</p></div>
+      <div class="turn user"><span class="speaker">Shopper</span><p>People keep saying they can't hear me in noisy rooms.</p></div>
+      <div class="turn"><span class="speaker">Assistant</span><p>That's a common one. In-ear or over-ear, and does a boom mic bother you?</p></div>
+      <div class="turn user"><span class="speaker">Shopper</span><p>In-ear, and no boom mic please.</p></div>
+      <div class="turn"><span class="speaker">Assistant</span><p>Got it &mdash; here's a pair built around call-focused noise cancellation in a compact in-ear fit, which lines up with the noisy-room problem you mentioned.</p></div>
+      <div class="turn user"><span class="speaker">Shopper</span><p>What if I want to spend less?</p></div>
+      <div class="turn"><span class="speaker">Assistant</span><p>This option keeps the same call-focused noise cancellation and drops the wireless charging case to bring the price down.</p></div>
+    </div>
+    <p class="goal-note">The client's own goal for the project: improve customer satisfaction, reduce
+    operational cost, and grow sales &mdash; rolled out in phases rather than as a single launch.</p>
+
+    <p class="demonstrates"><span class="label">Demonstrates:</span> system prompt &amp; persona design,
+    function-calling contracts, ready-to-implement conversation specifications</p>
+  </section>
+
+  <!-- CASE STUDY 2 — SUMMARY -->
+  <section class="case" id="booking">
+    <p class="case-index">02 &nbsp;Multi-step booking</p>
+    <h2 class="case-title">Booking a trip without a form pretending to be a conversation</h2>
+    <p class="challenge">
+      A large organization needed an assistant that could book flights, hotels, and ground
+      transportation end to end, then route the approvals and reporting that come after, without
+      making employees fill out what was really a form disguised as a chat.
+    </p>
+    <h3 class="sub">Approach</h3>
+    <ul class="approach">
+      <li>Built a slot-filling architecture that accepts multiple details in one utterance
+      (&ldquo;a flight and a hotel to the coast next week&rdquo;) instead of one question at a time.</li>
+      <li>Carried context across the booking sequence &mdash; flight dates informed the hotel date
+      suggestions by default &mdash; so the system used what it already knew rather than re-asking.</li>
+      <li>Gave every capture point its own recovery path for low-confidence or unrecognized input,
+      rather than one generic fallback for the whole flow.</li>
+      <li>Extended the design past booking into approval routing and post-trip reporting, so the
+      conversation didn't end where the transaction did.</li>
+    </ul>
+    <p class="demonstrates"><span class="label">Demonstrates:</span> multi-turn dialogue architecture,
+    context carryover, error recovery, graceful fallback strategies</p>
+  </section>
+
+  <!-- CASE STUDY 3 — SUMMARY -->
+  <section class="case" id="evaluation">
+    <p class="case-index">03 &nbsp;Evaluation &amp; calibration</p>
+    <h2 class="case-title">Catching the responses that are correct and still wrong</h2>
+    <p class="challenge">
+      A multi-agent conversational AI system for a major financial services firm needed a way to catch
+      responses that were technically accurate but pragmatically off &mdash; the wrong register, the
+      wrong tone &mdash; before that gap showed up in production.
+    </p>
+    <h3 class="sub">Approach</h3>
+    <ul class="approach">
+      <li>Built an evaluation rubric grounded in speech-act theory that scores register, tone, and
+      pragmatic appropriateness, alongside deterministic metrics like routing and disambiguation
+      accuracy.</li>
+      <li>Designed and ran the calibration process that kept several reviewers scoring consistently
+      against that rubric.</li>
+      <li>Ran a multi-provider LLM evaluation across five model providers, building golden test sets
+      and a scoring methodology from scratch to guide production model selection.</li>
+      <li>Mined production conversations to build Monte Carlo simulations that stress-tested a newly
+      launched voice channel before it went live.</li>
+    </ul>
+    <p class="demonstrates"><span class="label">Demonstrates:</span> evaluation rubric design,
+    calibration process, model selection, pre-production quality testing</p>
+  </section>
+
+  <!-- CASE STUDY 4 — SUMMARY -->
+  <section class="case" id="guardrails">
+    <p class="case-index">04 &nbsp;Guardrails on generative output</p>
+    <h2 class="case-title">Letting a model answer only once it's earned the right to</h2>
+    <p class="challenge">
+      An enterprise support assistant needed a generative layer for open-ended questions the
+      rules-based flows couldn't cover, without letting ungrounded model output reach users
+      unchecked.
+    </p>
+    <h3 class="sub">Approach</h3>
+    <ul class="approach">
+      <li>Designed a confidence-gated handoff: known intents are handled deterministically, and only
+      low-confidence matches escalate to retrieval-grounded generation, with a distinct path for
+      when even that search comes up empty.</li>
+      <li>Specified a visible disclaimer pattern so people always know when a response was
+      AI-generated versus pulled from a verified source.</li>
+      <li>Designed escalating fallback behavior &mdash; a first misunderstood turn gets a targeted
+      reprompt, a second gets an offer to rephrase or hand off &mdash; so a repeat failure doesn't
+      feel like hitting the same wall twice.</li>
+      <li>Set explicit scope boundaries on generative responses so the design anticipated where
+      people would push past what the assistant was meant to handle, and routed accordingly.</li>
+    </ul>
+    <p class="demonstrates"><span class="label">Demonstrates:</span> guardrail design, generated-content
+    disclosure, escalating fallback, risk-aware scoping</p>
+  </section>
+
+  <footer>
+    Mohammed Al Meqdad, PhD &nbsp;&middot;&nbsp; <a href="mailto:me.meqdad@gmail.com">me.meqdad@gmail.com</a>
+  </footer>
+
+</div>
+</body>
+</html>
