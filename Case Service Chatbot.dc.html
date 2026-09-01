@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Service chatbot — Mohammed Al Meqdad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #F7F5F0; -webkit-font-smoothing: antialiased; }
+  a { color: #2F4D5C; }
+  a:hover { color: #9B6640; }
+  ::selection { background: #E4DCCB; }
+</style>
+</helmet>
+<div style="background:#F7F5F0;color:#16181C;font-family:'IBM Plex Sans',sans-serif;font-size:17px;line-height:1.6;min-height:100vh">
+  <div style="max-width:1060px;margin:0 auto;padding:0 40px">
+
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:28px 0;border-bottom:1px solid #E0DBCE">
+      <a href="Portfolio Home.dc.html" style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#16181C;text-decoration:none">← Mohammed Al Meqdad, PhD</a>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:#8C8779">Case 04 · Persona &amp; tone</span>
+    </div>
+
+    <header style="padding:84px 0 56px;display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:64px;align-items:start">
+      <div>
+        <p style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:#9B6640;margin:0 0 22px">Pet insurance carrier · Web and mobile</p>
+        <h1 style="font-family:Newsreader,serif;font-weight:400;font-size:clamp(2.3rem,4.6vw,3.4rem);line-height:1.06;letter-spacing:-0.015em;margin:0 0 24px;max-width:19ch;text-wrap:balance">Warmth that survives contact with a claims API</h1>
+        <p style="font-size:1.09rem;line-height:1.62;color:#41464E;margin:0;max-width:56ch;text-wrap:pretty">The brand voice on the website is playful — furry friends, fetch, best buddy. That voice is charming when you are buying a policy and unbearable when you are filing a claim for an animal that is dying. The design problem was one persona that could hold both.</p>
+      </div>
+      <div style="border-left:1px solid #E0DBCE;padding-left:22px;display:flex;flex-direction:column;gap:20px">
+        <div>
+          <p style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#8C8779;margin:0 0 6px">Role</p>
+          <p style="margin:0;font-size:0.94rem;color:#41464E;line-height:1.5">Persona definition, dialogue specification, tone rules, error handling.</p>
+        </div>
+        <div>
+          <p style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#8C8779;margin:0 0 6px">Goals</p>
+          <p style="margin:0;font-size:0.94rem;color:#41464E;line-height:1.5">Reduce agent transfers, increase automation, across quoting, coverage, claims and payments.</p>
+        </div>
+        <div>
+          <p style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#8C8779;margin:0 0 6px">Two audiences</p>
+          <p style="margin:0;font-size:0.94rem;color:#41464E;line-height:1.5">Unauthenticated shoppers on the public site; policyholders in the authenticated app.</p>
+        </div>
+      </div>
+    </header>
+
+    <section style="border-top:1px solid #E0DBCE;padding:52px 0 0">
+      <div style="display:grid;grid-template-columns:200px minmax(0,1fr);gap:44px;align-items:start">
+        <h2 style="font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#16181C;margin:6px 0 0">Design from volume</h2>
+        <div>
+          <p style="margin:0 0 26px;font-size:1.04rem;line-height:1.64;color:#41464E;max-width:60ch;text-wrap:pretty">Before writing a line of dialogue I pulled the agent disposition counts for a quarter. Sales inquiries are what the business talks about; claims are what the queue is actually made of. Four of the top five reasons people contacted support were claim-related, which decided the build order and the emotional centre of gravity of the persona.</p>
+          <div style="display:flex;flex-direction:column;gap:9px;max-width:620px">
+            <div style="display:grid;grid-template-columns:190px minmax(0,1fr) 58px;gap:14px;align-items:center">
+              <span style="font-size:0.92rem;color:#16181C">Claim status update</span>
+              <div style="height:16px;background:#2F4D5C;width:100%"></div>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#5A6068;text-align:right">5,962</span>
+            </div>
+            <div style="display:grid;grid-template-columns:190px minmax(0,1fr) 58px;gap:14px;align-items:center">
+              <span style="font-size:0.92rem;color:#16181C">Review policy detail</span>
+              <div style="height:16px;background:#2F4D5C;width:51%"></div>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#5A6068;text-align:right">3,066</span>
+            </div>
+            <div style="display:grid;grid-template-columns:190px minmax(0,1fr) 58px;gap:14px;align-items:center">
+              <span style="font-size:0.92rem;color:#16181C">Sales inquiry</span>
+              <div style="height:16px;background:#9B6640;width:42%"></div>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#5A6068;text-align:right">2,507</span>
+            </div>
+            <div style="display:grid;grid-template-columns:190px minmax(0,1fr) 58px;gap:14px;align-items:center">
+              <span style="font-size:0.92rem;color:#16181C">Claim submission</span>
+              <div style="height:16px;background:#2F4D5C;width:33%"></div>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#5A6068;text-align:right">1,987</span>
+            </div>
+            <div style="display:grid;grid-template-columns:190px minmax(0,1fr) 58px;gap:14px;align-items:center">
+              <span style="font-size:0.92rem;color:#16181C">Claim missing info</span>
+              <div style="height:16px;background:#2F4D5C;width:31%"></div>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#5A6068;text-align:right">1,853</span>
+            </div>
+            <div style="display:grid;grid-template-columns:190px minmax(0,1fr) 58px;gap:14px;align-items:center">
+              <span style="font-size:0.92rem;color:#16181C">Cancellation request</span>
+              <div style="height:16px;background:#C6BFAF;width:22%"></div>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#5A6068;text-align:right">1,333</span>
+            </div>
+          </div>
+          <p style="margin:16px 0 0;font-size:0.87rem;color:#8C8779;font-family:'IBM Plex Mono',monospace;letter-spacing:0.03em">One quarter of agent dispositions. A further ~6,000 contacts closed with no disposition recorded.</p>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:72px 0 0">
+      <div style="display:grid;grid-template-columns:200px minmax(0,1fr);gap:44px;align-items:start">
+        <h2 style="font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#16181C;margin:6px 0 0">The tonal rule</h2>
+        <div>
+          <p style="margin:0 0 24px;font-size:1.04rem;line-height:1.64;color:#41464E;max-width:60ch;text-wrap:pretty">Personality lives in explanation, never in prompting. When the assistant is describing something, it can sound like the brand. When it is asking a person for information, or delivering news, it gets out of the way. That single line resolved almost every tone argument in review, because it converts taste into a rule anyone can apply.</p>
+          <div style="border:1px solid #E0DBCE;background:#FFFFFF">
+            <div style="display:grid;grid-template-columns:150px minmax(0,1fr) minmax(0,1fr);gap:0;background:#FBFAF6;border-bottom:1px solid #E8E3D8">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.09em;text-transform:uppercase;color:#8C8779;padding:11px 16px">Moment</span>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.09em;text-transform:uppercase;color:#8C8779;padding:11px 16px">Written</span>
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.09em;text-transform:uppercase;color:#8C8779;padding:11px 16px">Rejected</span>
+            </div>
+            <div style="display:grid;grid-template-columns:150px minmax(0,1fr) minmax(0,1fr);border-bottom:1px solid #F0ECE1">
+              <span style="padding:15px 16px;font-size:0.9rem;color:#5A6068">Quote intro</span>
+              <span style="padding:15px 16px;font-size:0.95rem;line-height:1.5">Tell us a bit about your best friend and we'll put a quote together.</span>
+              <span style="padding:15px 16px;font-size:0.95rem;line-height:1.5;color:#8C8779">Please provide your pet's details to begin the quotation process.</span>
+            </div>
+            <div style="display:grid;grid-template-columns:150px minmax(0,1fr) minmax(0,1fr);border-bottom:1px solid #F0ECE1">
+              <span style="padding:15px 16px;font-size:0.9rem;color:#5A6068">Claim in review</span>
+              <span style="padding:15px 16px;font-size:0.95rem;line-height:1.5">Your claim is with a reviewer. They usually finish within three business days, and you'll get an email the moment it's decided.</span>
+              <span style="padding:15px 16px;font-size:0.95rem;line-height:1.5;color:#8C8779">Let me fetch that for you! Your claim is still being sniffed out by our team.</span>
+            </div>
+            <div style="display:grid;grid-template-columns:150px minmax(0,1fr) minmax(0,1fr);border-bottom:1px solid #F0ECE1">
+              <span style="padding:15px 16px;font-size:0.9rem;color:#5A6068">Claim denied</span>
+              <span style="padding:15px 16px;font-size:0.95rem;line-height:1.5">This one wasn't covered, and I'm sorry — the reason given was a pre-existing condition. You can appeal it, and I can start that now.</span>
+              <span style="padding:15px 16px;font-size:0.95rem;line-height:1.5;color:#8C8779">Unfortunately your claim has been denied. Is there anything else I can help with?</span>
+            </div>
+            <div style="display:grid;grid-template-columns:150px minmax(0,1fr) minmax(0,1fr)">
+              <span style="padding:15px 16px;font-size:0.9rem;color:#5A6068">Asking for a policy number</span>
+              <span style="padding:15px 16px;font-size:0.95rem;line-height:1.5">What's the policy number? It's at the top of any email we've sent you.</span>
+              <span style="padding:15px 16px;font-size:0.95rem;line-height:1.5;color:#8C8779">Pawlicy number, please!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:72px 0 0">
+      <div style="display:grid;grid-template-columns:200px minmax(0,1fr);gap:44px;align-items:start">
+        <h2 style="font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#16181C;margin:6px 0 0">Spec page</h2>
+        <div>
+          <p style="margin:0 0 22px;font-size:1.04rem;line-height:1.64;color:#41464E;max-width:60ch;text-wrap:pretty">The welcome node as written, in the notation the whole nineteen-page specification uses. Green for anything expecting user input, blue for anything that only plays; the node name sits on the top line and only the initial prompt goes inside the shape.</p>
+          <div style="border:1px solid #E0DBCE;background:#FFFFFF;padding:32px 30px 30px">
+            <div style="display:grid;grid-template-columns:minmax(0,340px) 56px minmax(0,1fr);align-items:start">
+              <div style="display:flex;flex-direction:column">
+                <div style="background:#EDF1F2;border:1px solid #2F4D5C;padding:9px 13px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.09em;color:#2F4D5C;text-align:center">START</div>
+                <div style="height:18px;display:flex;justify-content:center"><div style="width:1px;background:#B9B1A0"></div></div>
+                <div style="border:2px solid #4C6B4A;background:#F1F4EE;padding:12px 14px">
+                  <p style="margin:0 0 8px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.09em;text-transform:uppercase;color:#4C6B4A;text-decoration:underline">Welcome</p>
+                  <p style="margin:0 0 6px;font-size:13.5px;line-height:1.5;font-weight:600">Hi &lt;UserName&gt;! I can answer questions about your policy. How can I help?</p>
+                  <p style="margin:0 0 10px;font-size:12.5px;line-height:1.5;color:#41464E">Here are some things people usually ask me. Or just type your question.</p>
+                  <div style="display:flex;flex-wrap:wrap;gap:6px">
+                    <span style="border:1px solid #C3CDBF;background:#FFFFFF;padding:4px 9px;font-size:11.5px">Claims</span>
+                    <span style="border:1px solid #C3CDBF;background:#FFFFFF;padding:4px 9px;font-size:11.5px">My coverage</span>
+                    <span style="border:1px solid #C3CDBF;background:#FFFFFF;padding:4px 9px;font-size:11.5px">Payments and billing</span>
+                    <span style="border:1px solid #C3CDBF;background:#FFFFFF;padding:4px 9px;font-size:11.5px">It's something else</span>
+                  </div>
+                </div>
+                <div style="height:18px;display:flex;justify-content:center"><div style="width:1px;background:#B9B1A0"></div></div>
+                <div style="border:1px dashed #2F4D5C;background:#F4F1E9;padding:10px 14px;font-size:12.5px;color:#2F4D5C">Authenticated in the app, or anonymous on the public site?</div>
+                <div style="height:18px;display:flex;justify-content:center"><div style="width:1px;background:#B9B1A0"></div></div>
+                <div style="display:flex;gap:10px">
+                  <div style="flex:1;background:#EDF1F2;border:1px solid #2F4D5C;padding:9px 11px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.07em;color:#2F4D5C;text-align:center">TO CLAIM STATUS</div>
+                  <div style="flex:1;background:#EDF1F2;border:1px solid #2F4D5C;padding:9px 11px;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.07em;color:#2F4D5C;text-align:center">TO QUOTE</div>
+                </div>
+              </div>
+              <div style="display:flex;align-items:center;justify-content:center;padding-top:110px"><div style="width:100%;height:1px;background:#C9C2B1"></div></div>
+              <div style="border-left:1px dashed #C9C2B1;padding-left:22px;padding-top:80px;display:flex;flex-direction:column;gap:16px">
+                <p style="margin:0;font-size:12.5px;line-height:1.6;color:#8C8779"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:#16181C;display:block;margin-bottom:4px">Annotation</span>Buttons cover the four intents that account for most of the queue. Typing is never disabled — the buttons are a shortcut, not the interface.</p>
+                <p style="margin:0;font-size:12.5px;line-height:1.6;color:#8C8779"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:#16181C;display:block;margin-bottom:4px">Annotation</span>The greeting uses the first name only when the session is authenticated. On the public site the same node opens without a name rather than asking for one.</p>
+                <p style="margin:0;font-size:12.5px;line-height:1.6;color:#8C8779"><span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:#16181C;display:block;margin-bottom:4px">Error prompt</span>Sorry — I can help with claims, coverage, or payments. Which is it?</p>
+              </div>
+            </div>
+          </div>
+          <p style="margin:14px 0 0;font-size:0.85rem;color:#8C8779;line-height:1.55;max-width:70ch">Redrawn from the delivered specification in its own notation, with brand names and persona name removed.</p>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:72px 0 96px">
+      <div style="display:grid;grid-template-columns:200px minmax(0,1fr);gap:44px;align-items:start">
+        <h2 style="font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#16181C;margin:6px 0 0">Also decided</h2>
+        <div style="display:flex;flex-direction:column;gap:24px">
+          <div>
+            <h3 style="font-family:Newsreader,serif;font-weight:400;font-size:1.3rem;margin:0 0 8px;line-height:1.25">Two entry experiences, one persona</h3>
+            <p style="margin:0;font-size:1rem;line-height:1.6;color:#41464E;max-width:58ch;text-wrap:pretty">The public site is unauthenticated and mostly shopping; the app is authenticated and mostly service. The assistant greets by name in one and not the other, and the authenticated side carries noticeably more empathy, because the people there already have something at stake.</p>
+          </div>
+          <div>
+            <h3 style="font-family:Newsreader,serif;font-weight:400;font-size:1.3rem;margin:0 0 8px;line-height:1.25">Echo before acting</h3>
+            <p style="margin:0;font-size:1rem;line-height:1.6;color:#41464E;max-width:58ch;text-wrap:pretty">On anything urgent the assistant repeats back what it understood before doing it. It costs a line and it is the cheapest insurance against a confidently wrong action on someone's claim.</p>
+          </div>
+          <div>
+            <h3 style="font-family:Newsreader,serif;font-weight:400;font-size:1.3rem;margin:0 0 8px;line-height:1.25">API failure is a designed state</h3>
+            <p style="margin:0;font-size:1rem;line-height:1.6;color:#41464E;max-width:58ch;text-wrap:pretty">Every data call in the specification has a written failure prompt. Systems go down during exactly the conversations where the user is least able to absorb a generic apology.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div style="border-top:1px solid #E0DBCE;padding:26px 0 60px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.05em">
+      <a href="Portfolio Home.dc.html" style="color:#5A6068;text-decoration:none">← All work</a>
+      <a href="Case Workplace Assistant.dc.html" style="color:#2F4D5C;text-decoration:none">Next: finance and procurement →</a>
+    </div>
+
+  </div>
+</div>
+
+</x-dc>
+</body>
+</html>

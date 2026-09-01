@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voice authentication — Mohammed Al Meqdad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #F7F5F0; -webkit-font-smoothing: antialiased; }
+  a { color: #2F4D5C; }
+  a:hover { color: #9B6640; }
+  ::selection { background: #E4DCCB; }
+</style>
+</helmet>
+<div style="background:#F7F5F0;color:#16181C;font-family:'IBM Plex Sans',sans-serif;font-size:17px;line-height:1.6;min-height:100vh">
+  <div style="max-width:1060px;margin:0 auto;padding:0 40px">
+
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:28px 0;border-bottom:1px solid #E0DBCE">
+      <a href="Portfolio Home.dc.html" style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#16181C;text-decoration:none">← Mohammed Al Meqdad, PhD</a>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:#8C8779">Case 02 · Voice</span>
+    </div>
+
+    <header style="padding:84px 0 56px;display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:64px;align-items:start">
+      <div>
+        <p style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:#9B6640;margin:0 0 22px">Pharmaceutical · Employee support IVR</p>
+        <h1 style="font-family:Newsreader,serif;font-weight:400;font-size:clamp(2.3rem,4.6vw,3.4rem);line-height:1.06;letter-spacing:-0.015em;margin:0 0 24px;max-width:19ch;text-wrap:balance">The caller is already annoyed. Now authenticate them.</h1>
+        <p style="font-size:1.09rem;line-height:1.62;color:#41464E;margin:0;max-width:56ch;text-wrap:pretty">Nobody calls a support line to enjoy it. By the time authentication starts, the caller has already navigated a phone tree and is holding a case number they can't read out loud. This flow had two jobs: verify identity, and spend as few of the caller's turns doing it as possible.</p>
+      </div>
+      <div style="border-left:1px solid #E0DBCE;padding-left:22px;display:flex;flex-direction:column;gap:20px">
+        <div>
+          <p style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#8C8779;margin:0 0 6px">Role</p>
+          <p style="margin:0;font-size:0.94rem;color:#41464E;line-height:1.5">Conversation designer. Call flow, prompt writing, error and escalation strategy.</p>
+        </div>
+        <div>
+          <p style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#8C8779;margin:0 0 6px">Scope</p>
+          <p style="margin:0;font-size:0.94rem;color:#41464E;line-height:1.5">Authentication, intent collection, and case status lookup, feeding HR, payroll and procurement queues.</p>
+        </div>
+        <div>
+          <p style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#8C8779;margin:0 0 6px">Channel note</p>
+          <p style="margin:0;font-size:0.94rem;color:#41464E;line-height:1.5">Voice. No buttons to fall back on, no scrollback, and every prompt costs the caller real seconds.</p>
+        </div>
+      </div>
+    </header>
+
+    <section style="border-top:1px solid #E0DBCE;padding:52px 0 0">
+      <div style="display:grid;grid-template-columns:200px minmax(0,1fr);gap:44px;align-items:start">
+        <h2 style="font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#16181C;margin:6px 0 0">The rule</h2>
+        <div>
+          <p style="margin:0 0 18px;font-size:1.04rem;line-height:1.64;color:#41464E;max-width:60ch;text-wrap:pretty">Most IVRs have one fallback for the whole call. Ask anything, misunderstand anything, get the same apology. It's cheap to build and it teaches the caller that the system isn't listening, because the response to <em>4-1-5</em> is identical to the response to silence.</p>
+          <p style="margin:0;font-size:1.04rem;line-height:1.64;color:#41464E;max-width:60ch;text-wrap:pretty">Here, every prompt that takes input owns its own error prompt, its own retry wording, and its own exit. Two failures at any single capture point ends the loop and hands the caller to a person, tagged with why. Callers who fail authentication are then allowed straight through to an agent on their next attempt, so the system can't bounce them between authentication and transfer forever.</p>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:72px 0 0">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap;margin-bottom:20px">
+        <h2 style="font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#16181C;margin:0">Walk the flow</h2>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.05em;color:#8C8779">Select any node · prompts as written in the specification</span>
+      </div>
+
+      <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0;border:1px solid #E0DBCE;background:#FFFFFF">
+        <div style="padding:30px 26px 34px;border-right:1px solid #E8E3D8;background:#FBFAF6">
+          <sc-for list="{{ nodes }}" as="node" hint-placeholder-count="8">
+            <div>
+              <div style="display:flex;justify-content:center;height:16px"><div style="width:1px;background:#C9C2B1"></div></div>
+              <button onClick="{{ node.pick }}" style="display:block;width:100%;text-align:left;cursor:pointer;font-family:'IBM Plex Sans',sans-serif;background:{{ node.bg }};border:{{ node.border }};padding:11px 14px;color:#16181C" style-hover="border-color:#2F4D5C">
+                <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:0.1em;text-transform:uppercase;color:{{ node.kindColor }};display:block;margin-bottom:5px">{{ node.kind }}</span>
+                <span style="font-size:0.93rem;line-height:1.4;font-weight:{{ node.weight }};display:block">{{ node.label }}</span>
+              </button>
+            </div>
+          </sc-for>
+        </div>
+
+        <div style="padding:30px 28px 34px">
+          <div style="position:sticky;top:24px">
+            <p style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;color:#9B6640;margin:0 0 10px">{{ sel.kind }}</p>
+            <h3 style="font-family:Newsreader,serif;font-weight:400;font-size:1.55rem;line-height:1.2;margin:0 0 20px">{{ sel.label }}</h3>
+
+            <sc-if value="{{ sel.hasPrompt }}" hint-placeholder-val="{{ true }}">
+              <div style="border-left:2px solid #2F4D5C;padding:2px 0 2px 14px;margin-bottom:18px">
+                <p style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.09em;text-transform:uppercase;color:#8C8779;margin:0 0 6px">Prompt</p>
+                <p style="margin:0;font-size:1rem;line-height:1.5;color:#1F2229">{{ sel.prompt }}</p>
+              </div>
+            </sc-if>
+
+            <sc-if value="{{ sel.hasError }}" hint-placeholder-val="{{ true }}">
+              <div style="border-left:2px solid #9B6640;padding:2px 0 2px 14px;margin-bottom:18px">
+                <p style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.09em;text-transform:uppercase;color:#8C8779;margin:0 0 6px">On no-match / no-input</p>
+                <p style="margin:0 0 8px;font-size:0.97rem;line-height:1.5;color:#1F2229">{{ sel.error1 }}</p>
+                <p style="margin:0;font-size:0.97rem;line-height:1.5;color:#1F2229">{{ sel.error2 }}</p>
+              </div>
+            </sc-if>
+
+            <sc-if value="{{ sel.hasExits }}" hint-placeholder-val="{{ true }}">
+              <div style="margin-bottom:18px">
+                <p style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.09em;text-transform:uppercase;color:#8C8779;margin:0 0 8px">Exits</p>
+                <sc-for list="{{ sel.exits }}" as="exit" hint-placeholder-count="2">
+                  <p style="margin:0 0 6px;font-size:0.93rem;line-height:1.5;color:#41464E;font-family:'IBM Plex Mono',monospace">{{ exit }}</p>
+                </sc-for>
+              </div>
+            </sc-if>
+
+            <div style="border-top:1px solid #E8E3D8;padding-top:16px">
+              <p style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.09em;text-transform:uppercase;color:#8C8779;margin:0 0 8px">Why it's built this way</p>
+              <p style="margin:0;font-size:0.97rem;line-height:1.6;color:#41464E;text-wrap:pretty">{{ sel.why }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:72px 0 0">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap;margin-bottom:20px">
+        <h2 style="font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#16181C;margin:0">The page as specified</h2>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.05em;color:#8C8779">Authentication page · prompt wording verbatim, identifiers removed</span>
+      </div>
+      <div style="border:1px solid #E0DBCE;background:#FFFFFF;padding:38px 34px 34px">
+        <div style="display:grid;grid-template-columns:minmax(0,320px) 64px minmax(0,300px);gap:0;align-items:start">
+
+          <div style="display:flex;flex-direction:column;align-items:stretch">
+            <div style="background:#EDF1F2;border:1px solid #2F4D5C;padding:9px 13px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.09em;color:#2F4D5C;text-align:center">START · FROM CALLBACK DISAMBIG</div>
+            <div style="height:18px;display:flex;justify-content:center"><div style="width:1px;background:#B9B1A0"></div></div>
+            <div style="border:1px solid #16181C;border-left:4px double #16181C;border-right:4px double #16181C;background:#FFFFFF;padding:11px 14px;font-size:13px;line-height:1.4">Look up the inbound number (ANI)</div>
+            <div style="height:18px;display:flex;justify-content:center"><div style="width:1px;background:#B9B1A0"></div></div>
+            <div style="border:1px dashed #2F4D5C;background:#F4F1E9;padding:10px 14px;font-size:12.5px;color:#2F4D5C;display:flex;justify-content:space-between;gap:12px"><span>Does it match an account?</span><span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#8C8779">yes → SSN</span></div>
+            <div style="height:18px;display:flex;justify-content:center"><div style="width:1px;background:#B9B1A0"></div></div>
+            <div style="border:3px solid #16181C;background:#FFFFFF;padding:11px 14px">
+              <p style="margin:0 0 6px;font-size:13.5px;font-weight:600;line-height:1.4">What's the phone number on your account?</p>
+              <p style="margin:0;font-size:11.5px;line-height:1.45;color:#9B6640">ERROR: Sorry, what's that phone number?</p>
+            </div>
+            <div style="height:18px;display:flex;justify-content:center"><div style="width:1px;background:#B9B1A0"></div></div>
+            <div style="border:1px dashed #2F4D5C;background:#F4F1E9;padding:10px 14px;font-size:12.5px;color:#2F4D5C;display:flex;justify-content:space-between;gap:12px"><span>Format correct?</span><span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#8C8779">no → retry</span></div>
+            <div style="height:18px;display:flex;justify-content:center"><div style="width:1px;background:#B9B1A0"></div></div>
+            <div style="border:1px solid #16181C;border-left:4px double #16181C;border-right:4px double #16181C;background:#FFFFFF;padding:11px 14px;font-size:13px;line-height:1.4">API: look up account</div>
+            <div style="height:18px;display:flex;justify-content:center"><div style="width:1px;background:#B9B1A0"></div></div>
+            <div style="border:3px solid #16181C;background:#FFFFFF;padding:11px 14px">
+              <p style="margin:0 0 6px;font-size:13.5px;font-weight:600;line-height:1.4">To verify, please tell me the last four digits of your Social Security Number.</p>
+              <p style="margin:0;font-size:11.5px;line-height:1.45;color:#9B6640">ERROR: Sorry, what's the last four of your social security number?</p>
+            </div>
+            <div style="height:18px;display:flex;justify-content:center"><div style="width:1px;background:#B9B1A0"></div></div>
+            <div style="background:#EDF1F2;border:1px solid #2F4D5C;padding:9px 13px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.09em;color:#2F4D5C;text-align:center">TO INTENT COLLECTION</div>
+          </div>
+
+          <div style="display:flex;align-items:center;justify-content:center;padding-top:150px">
+            <div style="width:100%;height:1px;background:#C9C2B1"></div>
+          </div>
+
+          <div style="border-left:1px dashed #C9C2B1;padding-left:22px;display:flex;flex-direction:column;gap:14px;padding-top:120px">
+            <p style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.09em;text-transform:uppercase;color:#8C8779;margin:0">Shared error handling · every capture point on this page</p>
+            <div style="border:1px solid #E4DFD2;background:#FBFAF6;padding:11px 13px;font-size:12.5px;line-height:1.5">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:#8C8779;display:block;margin-bottom:5px">No (1×)</span>
+              I may have missed part of that. What's the phone number on your account?
+            </div>
+            <div style="border:1px solid #E4DFD2;background:#FBFAF6;padding:11px 13px;font-size:12.5px;line-height:1.5">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:#8C8779;display:block;margin-bottom:5px">No (2×)</span>
+              I'm just not getting it.
+            </div>
+            <div style="height:10px;display:flex;justify-content:flex-start;padding-left:20px"><div style="width:1px;background:#B9B1A0"></div></div>
+            <div style="background:#F7EDE2;border:1px solid #9B6640;padding:11px 13px;font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.07em;color:#9B6640;line-height:1.6">TRANSFER<span style="display:block;color:#7C5230">Reason: authentication failure</span><span style="display:block;color:#7C5230">Mark caller as auth-failed</span></div>
+            <p style="margin:0;font-size:11.5px;line-height:1.5;color:#8C8779;font-style:italic">Annotation from the spec: to avoid a loop between authentication and transfer, these callers are allowed directly to an agent.</p>
+          </div>
+
+        </div>
+      </div>
+      <p style="margin:14px 0 0;font-size:0.85rem;color:#8C8779;line-height:1.55;max-width:70ch">Redrawn from the delivered Lucidchart page in the same notation, with client identifiers stripped. The original specification set runs to eleven pages across authentication, intent collection and case status.</p>
+    </section>
+
+    <section style="padding:76px 0 96px">
+      <div style="display:grid;grid-template-columns:200px minmax(0,1fr);gap:44px;align-items:start">
+        <h2 style="font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#16181C;margin:6px 0 0">Three habits</h2>
+        <div style="display:flex;flex-direction:column;gap:26px">
+          <div>
+            <h3 style="font-family:Newsreader,serif;font-weight:400;font-size:1.3rem;margin:0 0 8px;line-height:1.25">Escalate the wording, not just the counter</h3>
+            <p style="margin:0;font-size:1rem;line-height:1.6;color:#41464E;max-width:58ch;text-wrap:pretty">First retry admits a partial hearing and re-asks specifically. Second admits defeat plainly and stops. Repeating the same apology twice is how a caller learns to say <em>agent</em>.</p>
+          </div>
+          <div>
+            <h3 style="font-family:Newsreader,serif;font-weight:400;font-size:1.3rem;margin:0 0 8px;line-height:1.25">Every transfer carries a reason</h3>
+            <p style="margin:0;font-size:1rem;line-height:1.6;color:#41464E;max-width:58ch;text-wrap:pretty">Auth failure, explicit agent request, unsupported intent. Without the tag, the monthly report says containment dropped and nobody can say which prompt caused it.</p>
+          </div>
+          <div>
+            <h3 style="font-family:Newsreader,serif;font-weight:400;font-size:1.3rem;margin:0 0 8px;line-height:1.25">Ask for what the caller already has</h3>
+            <p style="margin:0;font-size:1rem;line-height:1.6;color:#41464E;max-width:58ch;text-wrap:pretty">The inbound number is checked before a single question is asked. When it matches, authentication costs one prompt instead of three, and the majority of callers never see the rest of this diagram.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div style="border-top:1px solid #E0DBCE;padding:26px 0 60px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.05em">
+      <a href="Portfolio Home.dc.html" style="color:#5A6068;text-decoration:none">← All work</a>
+      <a href="Case Evaluation.dc.html" style="color:#2F4D5C;text-decoration:none">Next: correct and still wrong →</a>
+    </div>
+
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const NODES = [
+  { id: 'start', kind: 'Entry point', label: 'Inbound call arrives', shape: 'entry',
+    exits: ['→ ANI lookup'],
+    why: "The flow starts before the caller says anything. Everything the system already knows about this call gets used before it asks a human for it." },
+  { id: 'ani', kind: 'Data call', label: 'Look up the inbound number', shape: 'process',
+    exits: ['→ Does the number match an account?'],
+    why: "A silent step with the biggest effect on average handle time. Most callers phone from the number on file, so the cheapest authentication is the one nobody notices happening." },
+  { id: 'animatch', kind: 'Decision', label: 'Does the number match an account?', shape: 'decision',
+    exits: ['Yes → Verify with last four of SSN', 'No → Ask for the phone number'],
+    why: "A match still isn't identity — phones get shared and spoofed — so it buys one factor, not entry. What it buys is skipping a question the caller would have had to answer with digits over a noisy line." },
+  { id: 'askphone', kind: 'Interaction prompt', label: 'Ask for the phone number', shape: 'ask',
+    prompt: "What's the phone number on your account?",
+    error1: "1st: I may have missed part of that. What's the phone number on your account?",
+    error2: "2nd: I'm just not getting it. → agent, marked as authentication failure.",
+    exits: ['→ Is the format valid?', '2 errors → Agent transfer'],
+    why: "The retry names the failure as the system's, not the caller's, and re-asks in full rather than saying \"sorry, again?\". On voice, a caller who has to reconstruct the question from memory usually answers a different one." },
+  { id: 'format', kind: 'Decision', label: 'Is the format valid?', shape: 'decision',
+    exits: ['Yes → Look up the account', 'No → Re-ask, up to two attempts'],
+    why: "Format validation happens before the database call so an obviously wrong capture is corrected conversationally instead of coming back as a not-found. Different failure, different sentence." },
+  { id: 'lookup', kind: 'Data call', label: 'Look up the account', shape: 'process',
+    exits: ['Found → Verify with last four of SSN', 'Not found → Agent transfer'],
+    why: "A well-formed number that isn't on file is not a recognition problem, and re-asking it would be dishonest. That path leaves the loop immediately." },
+  { id: 'ssn', kind: 'Interaction prompt', label: 'Verify with last four of SSN', shape: 'ask',
+    prompt: "To verify, please tell me the last four digits of your Social Security Number.",
+    error1: "1st: I may have missed part of that. What are the last four digits of your Social Security Number?",
+    error2: "2nd: I'm just not getting it. → agent, marked as authentication failure.",
+    exits: ['Match → Intent collection', '2 errors → Agent transfer'],
+    why: "Second factor, and the one people are most guarded about, so the prompt states the reason first — to verify — before asking. Sensitive digits get one retry, never three; pushing harder reads as suspicious rather than diligent." },
+  { id: 'transfer', kind: 'Transfer', label: 'Agent transfer, reason: authentication failure', shape: 'transfer',
+    exits: ['Mark caller as auth-failed', 'Next call: straight to an agent'],
+    why: "The tag exists so the same caller isn't sent back through authentication on their next attempt and bounced between the two forever. It also turns a support complaint into a number somebody can look at." },
+  { id: 'intent', kind: 'Interaction prompt', label: 'Intent collection', shape: 'ask',
+    prompt: "How can I help you?",
+    error1: "1st: Sorry, I can help with case status, HR, payroll, or procurement. Which do you need?",
+    error2: "2nd: → agent, reason: intent not captured.",
+    exits: ['Case status → Case status lookup', 'HR / payroll / procurement → routed queue'],
+    why: "The open question first, because callers who know what they want shouldn't listen to a menu. The menu only appears in the error prompt, where it stops being a barrier and starts being a hint." },
+  { id: 'case', kind: 'Interaction prompt', label: 'Case status lookup', shape: 'ask',
+    prompt: "What else can I help you with?",
+    error1: "1st: What else can I do for you?",
+    error2: "Global rule: any input, one retry, then an agent.",
+    exits: ['New request → Intent collection', 'Nothing else → Close'],
+    why: "After a resolved task the assistant reopens instead of hanging up, and the second phrasing of the same question is shorter than the first. Callers who have finished should feel the call winding down, not restarting." }
+];
+
+const SHAPE = {
+  entry:    { bg: '#EDF1F2', border: '1px solid #2F4D5C', weight: '500', kindColor: '#2F4D5C' },
+  process:  { bg: '#FFFFFF', border: '1px solid #16181C', weight: '400', kindColor: '#8C8779' },
+  decision: { bg: '#F4F1E9', border: '1px dashed #2F4D5C', weight: '400', kindColor: '#2F4D5C' },
+  ask:      { bg: '#FFFFFF', border: '3px solid #16181C', weight: '600', kindColor: '#16181C' },
+  transfer: { bg: '#F7EDE2', border: '1px solid #9B6640', weight: '500', kindColor: '#9B6640' }
+};
+
+class Component extends DCLogic {
+  state = { sel: 'askphone' };
+
+  renderVals() {
+    const selNode = NODES.find(n => n.id === this.state.sel) || NODES[0];
+    const active = SHAPE[selNode.shape];
+    return {
+      nodes: NODES.map(n => {
+        const s = SHAPE[n.shape];
+        const on = n.id === this.state.sel;
+        return {
+          kind: n.kind, label: n.label,
+          bg: on ? '#EDE9DE' : s.bg,
+          border: on ? '2px solid #2F4D5C' : s.border,
+          weight: s.weight, kindColor: s.kindColor,
+          pick: () => this.setState({ sel: n.id })
+        };
+      }),
+      sel: {
+        kind: selNode.kind, label: selNode.label,
+        hasPrompt: !!selNode.prompt, prompt: selNode.prompt || '',
+        hasError: !!selNode.error1, error1: selNode.error1 || '', error2: selNode.error2 || '',
+        hasExits: !!(selNode.exits && selNode.exits.length), exits: selNode.exits || [],
+        why: selNode.why
+      },
+      activeColor: active.kindColor
+    };
+  }
+}
+</script>
+</body>
+</html>

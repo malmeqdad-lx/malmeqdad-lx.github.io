@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Workplace assistant — Mohammed Al Meqdad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #F7F5F0; -webkit-font-smoothing: antialiased; }
+  a { color: #2F4D5C; }
+  a:hover { color: #9B6640; }
+  ::selection { background: #E4DCCB; }
+</style>
+</helmet>
+<div style="background:#F7F5F0;color:#16181C;font-family:'IBM Plex Sans',sans-serif;font-size:17px;line-height:1.6;min-height:100vh">
+  <div style="max-width:1060px;margin:0 auto;padding:0 40px">
+
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:28px 0;border-bottom:1px solid #E0DBCE">
+      <a href="Portfolio Home.dc.html" style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#16181C;text-decoration:none">← Mohammed Al Meqdad, PhD</a>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:#8C8779">Case 05 · Guardrails</span>
+    </div>
+
+    <header style="padding:84px 0 56px;display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:64px;align-items:start">
+      <div>
+        <p style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:#9B6640;margin:0 0 22px">Global data centre operator · Internal chat client bot</p>
+        <h1 style="font-family:Newsreader,serif;font-weight:400;font-size:clamp(2.3rem,4.6vw,3.4rem);line-height:1.06;letter-spacing:-0.015em;margin:0 0 24px;max-width:19ch;text-wrap:balance">Finance and procurement, without the portal</h1>
+        <p style="font-size:1.09rem;line-height:1.62;color:#41464E;margin:0;max-width:56ch;text-wrap:pretty">An assistant inside the chat client employees already live in, handling purchase requests, invoice questions and policy guidance. The interesting constraint was not what it could do. It was deciding what it must refuse to do, in a domain where a confident wrong answer becomes a compliance finding.</p>
+      </div>
+      <div style="border-left:1px solid #E0DBCE;padding-left:22px;display:flex;flex-direction:column;gap:20px">
+        <div>
+          <p style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#8C8779;margin:0 0 6px">Role</p>
+          <p style="margin:0;font-size:0.94rem;color:#41464E;line-height:1.5">Conversation design lead on the dialog specification: intents, scope, guardrails, escalation.</p>
+        </div>
+        <div>
+          <p style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#8C8779;margin:0 0 6px">Surface</p>
+          <p style="margin:0;font-size:0.94rem;color:#41464E;line-height:1.5">A workplace chat client, where the assistant sits beside colleagues and inherits their conversational expectations.</p>
+        </div>
+        <div>
+          <p style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#8C8779;margin:0 0 6px">Stakes</p>
+          <p style="margin:0;font-size:0.94rem;color:#41464E;line-height:1.5">Spend approvals and policy interpretation. Being wrong is more expensive than being unhelpful.</p>
+        </div>
+      </div>
+    </header>
+
+    <section style="border-top:1px solid #E0DBCE;padding:52px 0 0">
+      <div style="display:grid;grid-template-columns:200px minmax(0,1fr);gap:44px;align-items:start">
+        <h2 style="font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#16181C;margin:6px 0 0">Earning the right to answer</h2>
+        <div>
+          <p style="margin:0 0 22px;font-size:1.04rem;line-height:1.64;color:#41464E;max-width:60ch;text-wrap:pretty">The assistant has three tiers of answer, and it only descends a tier when the one above it has genuinely failed. Known intents resolve deterministically against systems of record. Unmatched questions fall to retrieval-grounded generation over approved policy documents. When retrieval finds nothing relevant, the assistant says so rather than composing something plausible out of the general knowledge in the model.</p>
+          <div style="display:flex;flex-direction:column;gap:0;border:1px solid #E0DBCE;background:#FFFFFF">
+            <div style="display:grid;grid-template-columns:36px minmax(0,1fr);gap:18px;padding:20px 22px;border-bottom:1px solid #F0ECE1">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#9B6640;padding-top:3px">01</span>
+              <div>
+                <p style="margin:0 0 6px;font-weight:600;font-size:1rem">High-confidence intent match</p>
+                <p style="margin:0;font-size:0.95rem;line-height:1.55;color:#41464E;max-width:58ch">Answered from the system of record, with the deterministic flow the specification defines. No generation involved.</p>
+              </div>
+            </div>
+            <div style="display:grid;grid-template-columns:36px minmax(0,1fr);gap:18px;padding:20px 22px;border-bottom:1px solid #F0ECE1">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#9B6640;padding-top:3px">02</span>
+              <div>
+                <p style="margin:0 0 6px;font-weight:600;font-size:1rem">Low confidence, retrieval succeeds</p>
+                <p style="margin:0;font-size:0.95rem;line-height:1.55;color:#41464E;max-width:58ch">Generated from retrieved policy content only, carrying a visible marker that the answer was AI-generated and a link to the source document.</p>
+              </div>
+            </div>
+            <div style="display:grid;grid-template-columns:36px minmax(0,1fr);gap:18px;padding:20px 22px">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;color:#9B6640;padding-top:3px">03</span>
+              <div>
+                <p style="margin:0 0 6px;font-weight:600;font-size:1rem">Retrieval comes back empty</p>
+                <p style="margin:0;font-size:0.95rem;line-height:1.55;color:#41464E;max-width:58ch">A distinct path, not a generic fallback. The assistant names what it looked in, and routes to the team that owns the question.</p>
+              </div>
+            </div>
+          </div>
+          <p style="margin:16px 0 24px;font-size:0.95rem;line-height:1.6;color:#8C8779;max-width:60ch;text-wrap:pretty">The disclosure marker was non-negotiable for me. If an employee cannot tell whether they are reading policy or paraphrase, they will quote the paraphrase in an audit.</p>
+          <div style="border:1px solid #E0DBCE;background:#FFFFFF;max-width:560px">
+            <div style="padding:11px 18px;border-bottom:1px solid #E8E3D8;background:#FBFAF6;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.09em;text-transform:uppercase;color:#8C8779">Tier 02 as rendered · disclosure pattern</div>
+            <div style="padding:20px 18px 22px;display:flex;flex-direction:column;gap:14px">
+              <div style="display:flex;justify-content:flex-end">
+                <div style="border:1px solid #E4DFD2;background:#FBFAF6;padding:10px 14px;font-size:0.95rem;line-height:1.5;max-width:80%">Do I need three quotes for a $40k software renewal?</div>
+              </div>
+              <div style="border:1px solid #C9D6DB;background:#EDF1F2;padding:12px 15px;max-width:88%">
+                <p style="margin:0 0 9px;font-size:0.95rem;line-height:1.55">Competitive bids are required above $25,000, so yes — three, unless the vendor is sole-source approved. Renewals with an existing master agreement can use the one-quote exception.</p>
+                <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center;border-top:1px solid #C9D6DB;padding-top:9px">
+                  <span style="font-family:'IBM Plex Mono',monospace;font-size:9.5px;letter-spacing:0.08em;text-transform:uppercase;color:#7C5230;background:#F7EDE2;border:1px solid #D9BB9A;padding:3px 7px">AI-generated</span>
+                  <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:#5A6068">Source: Procurement Policy §4.2 ↗</span>
+                </div>
+              </div>
+              <p style="margin:0;font-size:0.83rem;line-height:1.5;color:#8C8779;border-left:2px solid #E4DCCB;padding-left:12px">The marker and the citation are one unit and cannot be rendered separately. A disclosure without a source tells the employee to distrust the answer with no way to resolve it.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:72px 0 0">
+      <div style="display:grid;grid-template-columns:200px minmax(0,1fr);gap:44px;align-items:start">
+        <h2 style="font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#16181C;margin:6px 0 0">Scope, written down</h2>
+        <div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:34px">
+          <div>
+            <p style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.09em;text-transform:uppercase;color:#2F4D5C;margin:0 0 14px">Answers</p>
+            <div style="display:flex;flex-direction:column;gap:11px">
+              <p style="margin:0;font-size:0.97rem;line-height:1.5;border-left:2px solid #2F4D5C;padding-left:12px">Status of a purchase order or invoice</p>
+              <p style="margin:0;font-size:0.97rem;line-height:1.5;border-left:2px solid #2F4D5C;padding-left:12px">Who approves a request at a given amount</p>
+              <p style="margin:0;font-size:0.97rem;line-height:1.5;border-left:2px solid #2F4D5C;padding-left:12px">What a policy says, quoted with its source</p>
+              <p style="margin:0;font-size:0.97rem;line-height:1.5;border-left:2px solid #2F4D5C;padding-left:12px">How to start a process, step by step</p>
+            </div>
+          </div>
+          <div>
+            <p style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.09em;text-transform:uppercase;color:#9B6640;margin:0 0 14px">Refuses, and routes</p>
+            <div style="display:flex;flex-direction:column;gap:11px">
+              <p style="margin:0;font-size:0.97rem;line-height:1.5;border-left:2px solid #9B6640;padding-left:12px">Whether an exception to policy is allowed</p>
+              <p style="margin:0;font-size:0.97rem;line-height:1.5;border-left:2px solid #9B6640;padding-left:12px">Anything that reads as approving spend</p>
+              <p style="margin:0;font-size:0.97rem;line-height:1.5;border-left:2px solid #9B6640;padding-left:12px">Interpretation of a contract or legal term</p>
+              <p style="margin:0;font-size:0.97rem;line-height:1.5;border-left:2px solid #9B6640;padding-left:12px">Anything about a colleague's compensation</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:72px 0 0">
+      <div style="display:grid;grid-template-columns:200px minmax(0,1fr);gap:44px;align-items:start">
+        <h2 style="font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#16181C;margin:6px 0 0">Failing twice</h2>
+        <div>
+          <p style="margin:0 0 20px;font-size:1.04rem;line-height:1.64;color:#41464E;max-width:60ch;text-wrap:pretty">Repeating a fallback verbatim is the fastest way to make software feel unoccupied. The second miss admits the problem is not going to be solved by trying again.</p>
+          <div style="border:1px solid #E0DBCE;background:#FFFFFF;padding:22px 24px;display:flex;flex-direction:column;gap:14px;max-width:600px">
+            <div style="display:grid;grid-template-columns:80px minmax(0,1fr);gap:16px">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:#8C8779;padding-top:4px">Miss 1</span>
+              <p style="margin:0;font-size:0.98rem;line-height:1.5">I didn't quite get that. Are you asking about an invoice, a purchase request, or a policy?</p>
+            </div>
+            <div style="display:grid;grid-template-columns:80px minmax(0,1fr);gap:16px;border-top:1px solid #F0ECE1;padding-top:14px">
+              <span style="font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.08em;text-transform:uppercase;color:#8C8779;padding-top:4px">Miss 2</span>
+              <p style="margin:0;font-size:0.98rem;line-height:1.5">I'm not going to get this one. I can pass it to the procurement team with what you've written so far — want me to?</p>
+            </div>
+          </div>
+          <p style="margin:18px 0 0;font-size:0.95rem;line-height:1.6;color:#8C8779;max-width:60ch;text-wrap:pretty">The handoff carries the transcript. Making the employee retype their question to a human is the moment they stop using the assistant.</p>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:64px 0 96px">
+      <div style="display:grid;grid-template-columns:200px minmax(0,1fr);gap:44px;align-items:start">
+        <h2 style="font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#16181C;margin:6px 0 0">Position</h2>
+        <p style="margin:0;font-family:Newsreader,serif;font-size:1.45rem;line-height:1.4;color:#1F2229;max-width:44ch;text-wrap:pretty">Scope is a conversation design deliverable, not a product decision handed down to me. The list of things an assistant refuses is written in the same document as the things it says, because both are language.</p>
+      </div>
+    </section>
+
+    <div style="border-top:1px solid #E0DBCE;padding:26px 0 60px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.05em">
+      <a href="Portfolio Home.dc.html" style="color:#5A6068;text-decoration:none">← All work</a>
+      <a href="Writing Samples.dc.html" style="color:#2F4D5C;text-decoration:none">Writing samples →</a>
+    </div>
+
+  </div>
+</div>
+
+</x-dc>
+</body>
+</html>

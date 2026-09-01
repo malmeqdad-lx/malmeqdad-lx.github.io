@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guided commerce — Mohammed Al Meqdad</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..600;1,6..72,300..500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #F7F5F0; -webkit-font-smoothing: antialiased; }
+  a { color: #2F4D5C; }
+  a:hover { color: #9B6640; }
+  ::selection { background: #E4DCCB; }
+</style>
+</helmet>
+<div style="background:#F7F5F0;color:#16181C;font-family:'IBM Plex Sans',sans-serif;font-size:17px;line-height:1.6;min-height:100vh">
+  <div style="max-width:1060px;margin:0 auto;padding:0 40px">
+
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px;padding:28px 0;border-bottom:1px solid #E0DBCE">
+      <a href="Portfolio Home.dc.html" style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.08em;text-transform:uppercase;color:#16181C;text-decoration:none">← Mohammed Al Meqdad, PhD</a>
+      <span style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.06em;text-transform:uppercase;color:#8C8779">Case 01 · Guided commerce</span>
+    </div>
+
+    <header style="padding:84px 0 56px;display:grid;grid-template-columns:minmax(0,1fr) 260px;gap:64px;align-items:start">
+      <div>
+        <p style="font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:#9B6640;margin:0 0 22px">Global consumer electronics brand · Website chat</p>
+        <h1 style="font-family:Newsreader,serif;font-weight:400;font-size:clamp(2.3rem,4.6vw,3.4rem);line-height:1.06;letter-spacing:-0.015em;margin:0 0 24px;max-width:19ch;text-wrap:balance">A shopping assistant that asks why before it recommends</h1>
+        <p style="font-size:1.09rem;line-height:1.62;color:#41464E;margin:0;max-width:56ch;text-wrap:pretty">The brief was a website chatbot for a catalogue of twenty-odd product categories. The ambition underneath it was harder: shop the way a good in-store associate shops, by understanding what the customer is actually trying to fix before putting anything in front of them.</p>
+      </div>
+      <div style="border-left:1px solid #E0DBCE;padding-left:22px;display:flex;flex-direction:column;gap:20px">
+        <div>
+          <p style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#8C8779;margin:0 0 6px">Role</p>
+          <p style="margin:0;font-size:0.94rem;color:#41464E;line-height:1.5">Conversation designer. Dialogue architecture, persona, prompts, sample dialogues.</p>
+        </div>
+        <div>
+          <p style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#8C8779;margin:0 0 6px">Deliverables</p>
+          <p style="margin:0;font-size:0.94rem;color:#41464E;line-height:1.5">Dialog specification, intent inventory, suggested-utterance matrix, function-call contracts, reference conversations.</p>
+        </div>
+        <div>
+          <p style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#8C8779;margin:0 0 6px">Client goal</p>
+          <p style="margin:0;font-size:0.94rem;color:#41464E;line-height:1.5">Raise customer satisfaction, cut operational cost, grow sales. Phased rollout rather than one launch.</p>
+        </div>
+      </div>
+    </header>
+
+    <section style="border-top:1px solid #E0DBCE;padding:52px 0 0">
+      <div style="display:grid;grid-template-columns:200px minmax(0,1fr);gap:44px;align-items:start">
+        <h2 style="font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#16181C;margin:6px 0 0">The problem</h2>
+        <div>
+          <p style="margin:0 0 18px;font-size:1.04rem;line-height:1.64;color:#41464E;max-width:60ch;text-wrap:pretty">Retail search already works. Type a model number, get the model. What search cannot do is handle the shopper who says <em>my dishwasher is too loud</em>, because that sentence contains no product, no filter, and no budget. It contains a complaint.</p>
+          <p style="margin:0;font-size:1.04rem;line-height:1.64;color:#41464E;max-width:60ch;text-wrap:pretty">A chatbot built on keyword matching answers that sentence with a list of dishwashers. An associate answers it with a question. The design work was making the second option feasible without turning it into an interrogation, across twenty-two product categories with different decision criteria in each.</p>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:64px 0 0">
+      <div style="display:grid;grid-template-columns:200px minmax(0,1fr);gap:44px;align-items:start">
+        <h2 style="font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#16181C;margin:6px 0 0">Four decisions</h2>
+        <div style="display:flex;flex-direction:column;gap:30px">
+          <div>
+            <h3 style="font-family:Newsreader,serif;font-weight:400;font-size:1.34rem;margin:0 0 8px;line-height:1.25">Slots the shopper can fill in any order</h3>
+            <p style="margin:0;font-size:1rem;line-height:1.6;color:#41464E;max-width:58ch;text-wrap:pretty">Four things the assistant needs: why they're shopping, what isn't working with what they have, which features would fix that, and anything else that constrains the choice. None of them are mandatory and none of them are ordered. A shopper who opens with three of the four gets asked one question, not four.</p>
+          </div>
+          <div>
+            <h3 style="font-family:Newsreader,serif;font-weight:400;font-size:1.34rem;margin:0 0 8px;line-height:1.25">A prompt with an output contract</h3>
+            <p style="margin:0;font-size:1rem;line-height:1.6;color:#41464E;max-width:58ch;text-wrap:pretty">The persona and behaviour prompt was written as a spec, not as vibes. Every reply returns a natural-language turn plus a machine-readable product list, so the front end always knows what to render and never has to parse prose for SKUs.</p>
+          </div>
+          <div>
+            <h3 style="font-family:Newsreader,serif;font-weight:400;font-size:1.34rem;margin:0 0 8px;line-height:1.25">Two function contracts, so nothing is invented</h3>
+            <p style="margin:0;font-size:1rem;line-height:1.6;color:#41464E;max-width:58ch;text-wrap:pretty">One call searches inventory, one pulls full detail on a single product. If a claim about a product is not in a response from one of those two, the assistant does not make it. That single rule removed most of the hallucination surface before it existed.</p>
+          </div>
+          <div>
+            <h3 style="font-family:Newsreader,serif;font-weight:400;font-size:1.34rem;margin:0 0 8px;line-height:1.25">Reference conversations before code</h3>
+            <p style="margin:0;font-size:1rem;line-height:1.6;color:#41464E;max-width:58ch;text-wrap:pretty">Happy path, budget pushback, comparison requests, out-of-stock, and the shopper who wants to skip the consultation entirely. Engineering got a concrete behavioural target rather than an adjective.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:76px 0 0">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:20px;flex-wrap:wrap;margin-bottom:20px">
+        <h2 style="font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#16181C;margin:0">Try the flow</h2>
+        <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.05em;color:#8C8779">Reconstructed from the delivered spec · notes in the margin are mine</span>
+      </div>
+      <div style="border:1px solid #E0DBCE;background:#FFFFFF">
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:14px 20px;border-bottom:1px solid #E8E3D8;background:#FBFAF6">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.08em;text-transform:uppercase;color:#5A6068">Shopping assistant · product category page</span>
+          <button onClick="{{ reset }}" style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:0.06em;text-transform:uppercase;color:#5A6068;background:transparent;border:1px solid #DDD7C9;padding:5px 11px;cursor:pointer" style-hover="color:#16181C;border-color:#B9B1A0">Restart</button>
+        </div>
+        <div style="padding:26px 20px 8px">
+          <sc-for list="{{ turns }}" as="turn" hint-placeholder-count="3">
+            <div style="display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:26px;align-items:start;padding-bottom:18px">
+              <div style="display:flex">
+                <div style="max-width:100%">
+                  <div style="display:flex;gap:10px;align-items:flex-start">
+                    <span style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:0.07em;text-transform:uppercase;color:#8C8779;padding-top:7px;min-width:62px;text-align:right">{{ turn.who }}</span>
+                    <div style="border:1px solid #E4DFD2;background:#FBFAF6;padding:11px 14px;font-size:0.97rem;line-height:1.55;color:#1F2229;max-width:44ch">{{ turn.text }}</div>
+                  </div>
+                </div>
+              </div>
+              <p style="margin:6px 0 0;font-size:0.83rem;line-height:1.5;color:#8C8779;border-left:2px solid #E4DCCB;padding-left:12px">{{ turn.note }}</p>
+            </div>
+          </sc-for>
+          <div style="display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:26px">
+            <div style="display:flex;flex-wrap:wrap;gap:10px;padding:12px 0 22px 72px">
+              <sc-for list="{{ options }}" as="opt" hint-placeholder-count="3">
+                <button onClick="{{ opt.pick }}" style="font-family:'IBM Plex Sans',sans-serif;font-size:0.9rem;color:#2F4D5C;background:#EDF1F2;border:1px solid #C9D6DB;padding:8px 14px;cursor:pointer;text-align:left;line-height:1.4" style-hover="background:#E1E9EB;border-color:#9FB4BC">{{ opt.label }}</button>
+              </sc-for>
+            </div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:76px 0 0">
+      <div style="display:grid;grid-template-columns:200px minmax(0,1fr);gap:44px;align-items:start">
+        <h2 style="font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#16181C;margin:6px 0 0">From the prompt</h2>
+        <div>
+          <p style="margin:0 0 20px;font-size:1.02rem;line-height:1.62;color:#41464E;max-width:58ch;text-wrap:pretty">An excerpt from the behaviour section. The full document also covers persona, refusal cases, and the two function schemas.</p>
+          <pre style="margin:0;background:#1F2329;color:#E6E2D8;padding:24px 26px;font-family:'IBM Plex Mono',monospace;font-size:12.5px;line-height:1.75;overflow-x:auto;white-space:pre-wrap">You are a shopping assistant on the brand's own website.
+You are not a salesperson with a quota; you are the associate
+people ask for by name because they don't oversell.
+
+BEFORE RECOMMENDING
+  Collect, in whatever order the shopper offers them:
+    purpose      why they are shopping now
+    pain         what is wrong with what they have
+    features     what would fix the pain
+    constraints  budget, size, brand, timing
+  Ask at most one question per turn. Never re-ask a slot the
+  shopper has already filled, including implicitly.
+  If the shopper asks to skip ahead, skip ahead.
+
+WHEN RECOMMENDING
+  Name the pain you are solving in the same sentence as the
+  product. A recommendation without a reason is a listing.
+  Every specification you state must come from search_catalog
+  or get_product_detail. If it is not in the response, it does
+  not exist. Say you'll check rather than estimate.
+
+ALWAYS RETURN
+  reply     one conversational turn, no bullet lists
+  products  array of product ids, possibly empty</pre>
+        </div>
+      </div>
+    </section>
+
+    <section style="padding:76px 0 96px">
+      <div style="display:grid;grid-template-columns:200px minmax(0,1fr);gap:44px;align-items:start">
+        <h2 style="font-family:'IBM Plex Mono',monospace;font-size:12px;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:#16181C;margin:6px 0 0">What I'd watch</h2>
+        <div>
+          <p style="margin:0 0 16px;font-size:1.04rem;line-height:1.64;color:#41464E;max-width:60ch;text-wrap:pretty">The consultative opening is the whole bet, and it is also the thing most likely to annoy someone in a hurry. If I were instrumenting this today I would watch three numbers: how often shoppers abandon during the questions, how often the skip-ahead path is taken, and whether recommendations preceded by a stated reason convert better than the ones that are not.</p>
+          <p style="margin:0;font-size:1.04rem;line-height:1.64;color:#41464E;max-width:60ch;text-wrap:pretty">The third is the one that settles the argument. Everything else in the design follows from believing that naming the problem out loud is worth the extra turn.</p>
+        </div>
+      </div>
+    </section>
+
+    <div style="border-top:1px solid #E0DBCE;padding:26px 0 60px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.05em">
+      <a href="Portfolio Home.dc.html" style="color:#5A6068;text-decoration:none">← All work</a>
+      <a href="Case Voice Authentication.dc.html" style="color:#2F4D5C;text-decoration:none">Next: the caller is already annoyed →</a>
+    </div>
+
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const SCRIPT = {
+  start: {
+    bot: { text: "Hi — I'm the shopping assistant. Just talk to me like a person. What are you looking for today?", note: "Open prompt, not a menu. Suggested actions sit underneath for anyone who'd rather tap than type; on a category page they're scoped to that category." },
+    options: [
+      { label: "I need new headphones for work calls", next: "pain" },
+      { label: "Show me OLED TVs under $1,500", next: "filtered" },
+      { label: "Just show me your best-selling headphones", next: "skip" }
+    ]
+  },
+  pain: {
+    bot: { text: "Happy to help. What's not working with the pair you've got now?", note: "Purpose is filled, so the assistant asks for pain rather than restarting from the top. Asking why beats asking for specs: shoppers describe problems accurately and specs badly." },
+    options: [
+      { label: "People can't hear me in noisy rooms", next: "form" },
+      { label: "They die halfway through the day", next: "battery" },
+      { label: "Nothing, I just lost them", next: "noPain" }
+    ]
+  },
+  form: {
+    bot: { text: "That's a common one — the mic, not the speaker. In-ear or over-ear, and does a boom mic bother you?", note: "Two slots in one question because for the shopper it's a single decision. Splitting it would cost a turn and gain nothing." },
+    options: [
+      { label: "In-ear, and no boom mic please", next: "rec" },
+      { label: "Over-ear is fine, boom mic is fine", next: "recOver" }
+    ]
+  },
+  battery: {
+    bot: { text: "Got it. Roughly how long do you need them to last on a charge, and are you mostly on calls or listening?", note: "A different pain routes to a different feature question. The slot is the same — features — but the phrasing is derived from what they told me." },
+    options: [
+      { label: "A full workday, mostly calls", next: "rec" },
+      { label: "Actually, let's talk call quality instead", next: "form" }
+    ]
+  },
+  noPain: {
+    bot: { text: "Fair enough. Then let's shortcut it: same as before, or is there something you wished they did better?", note: "No pain to solve means no consultation to run. Forcing the script here would be the classic failure — a flow that can't read its own irrelevance." },
+    options: [
+      { label: "Same as before is fine", next: "rec" },
+      { label: "Better mic, actually", next: "form" }
+    ]
+  },
+  skip: {
+    bot: { text: "Sure. Here are the three highest-rated call headsets we carry. If you tell me what your current pair gets wrong, I can narrow this down a lot.", note: "The consultation is skippable and the offer to resume stays open. A flow you can't opt out of is a form wearing a conversation's clothes." },
+    options: [
+      { label: "Fine — the mic is the problem", next: "form" },
+      { label: "What if I want to spend less?", next: "budget" }
+    ]
+  },
+  filtered: {
+    bot: { text: "Here are the OLED models under $1,500, newest first. Is this for a bright room, a dark room, or mostly gaming?", note: "Fully-specified requests get answered first and consulted second. Results, then one question that meaningfully re-ranks them." },
+    options: [
+      { label: "Bright room, lots of daytime watching", next: "recTv" },
+      { label: "Gaming, mostly", next: "recTv" }
+    ]
+  },
+  rec: {
+    bot: { text: "Then this pair. Call-focused noise cancellation with a beamforming mic array, in a compact in-ear fit — that's the noisy-room problem you described, without the boom.", note: "The recommendation names the pain in the same sentence as the product. Every specification here came back from the catalogue call; nothing is estimated." },
+    options: [
+      { label: "What if I want to spend less?", next: "budget" },
+      { label: "Can it pair with two devices at once?", next: "detail" },
+      { label: "How does it compare to the over-ear one?", next: "compare" }
+    ]
+  },
+  recOver: {
+    bot: { text: "Then this one. Over-ear, boom mic, and the best voice pickup in the range — it's the pair our own support team uses on long calls.", note: "Same slot values, different constraint, different product. The reasoning sentence changes with it rather than being boilerplate." },
+    options: [
+      { label: "What if I want to spend less?", next: "budget" },
+      { label: "Can it pair with two devices at once?", next: "detail" }
+    ]
+  },
+  recTv: {
+    bot: { text: "Two of the three hold up well here. This one has the brighter panel and the better anti-glare coating, which matters more than the resolution difference between them.", note: "When the honest answer is that two products are close, say so. Manufactured certainty is how an assistant loses a customer twice." },
+    options: [
+      { label: "What if I want to spend less?", next: "budget" },
+      { label: "Start over", next: "start" }
+    ]
+  },
+  budget: {
+    bot: { text: "This one keeps the same call-focused noise cancellation and drops the wireless charging case. Same performance where your problem is, less where it isn't.", note: "Budget pushback is a designed branch, not a fallback. The rule for the cheaper option: protect the feature that solves the stated pain, trade away the rest." },
+    options: [
+      { label: "That works — add it to my cart", next: "cart" },
+      { label: "Can it pair with two devices at once?", next: "detail" }
+    ]
+  },
+  detail: {
+    bot: { text: "Yes — two devices at once, and it switches to whichever one rings. Worth knowing: on the cheaper model that's one device at a time.", note: "Detail questions hit get_product_detail rather than re-running search. The volunteered caveat about the cheaper model is the associate move: pre-empt the regret." },
+    options: [
+      { label: "Add the first one to my cart", next: "cart" },
+      { label: "How does it compare to the over-ear one?", next: "compare" }
+    ]
+  },
+  compare: {
+    bot: { text: "Over-ear wins on battery and comfort over four-hour stretches. In-ear wins on being in your pocket. On mic quality in a noisy room, which is your actual problem, they're within a hair of each other.", note: "Comparison answers get framed against the slot values already collected, not as a spec table. The shopper's stated problem is the axis." },
+    options: [
+      { label: "In-ear then. Add to cart", next: "cart" },
+      { label: "Start over", next: "start" }
+    ]
+  },
+  cart: {
+    bot: { text: "Added. It ships tomorrow to your area. Anything else you want to sort out while you're here?", note: "The transaction confirms, then the assistant reopens rather than closing. Cross-sell would go here in a later phase; in phase one it stays quiet." },
+    options: [
+      { label: "Run it again from the top", next: "start" }
+    ]
+  }
+};
+
+class Component extends DCLogic {
+  state = { turns: [{ who: 'Assistant', text: SCRIPT.start.bot.text, note: SCRIPT.start.bot.note }], node: 'start' };
+
+  choose(opt) {
+    const next = SCRIPT[opt.next];
+    if (opt.next === 'start') { this.reset(); return; }
+    this.setState(s => ({
+      node: opt.next,
+      turns: [...s.turns,
+        { who: 'Shopper', text: opt.label, note: '' },
+        { who: 'Assistant', text: next.bot.text, note: next.bot.note }]
+    }));
+  }
+
+  reset = () => {
+    this.setState({ node: 'start', turns: [{ who: 'Assistant', text: SCRIPT.start.bot.text, note: SCRIPT.start.bot.note }] });
+  };
+
+  renderVals() {
+    const node = SCRIPT[this.state.node] || SCRIPT.start;
+    return {
+      turns: this.state.turns,
+      options: node.options.map(o => ({ label: o.label, pick: () => this.choose(o) })),
+      reset: this.reset
+    };
+  }
+}
+</script>
+</body>
+</html>
